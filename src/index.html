@@ -9,7 +9,69 @@
 </head>
 
 <body class="root">
+  <div class="page">
+    <header class="header">
+      <h1 class="header__title">Добавление товара</h1>
+    </header>
 
+    <main class="main">
+      <aside class="sidebar">
+        <form class="form-product" name="form">
+          <label for="name" class="form-product__label">
+            Наименование товара
+          </label>
+
+          <input class="form-product__item form-product__item-name" type="text" id="name" name="name-product" placeholder="Введите наименование товара" required>
+
+          <label for="main-text" class="form-product__label">
+            Описание товара
+          </label>
+          <textarea name="main-text" id="main-text" placeholder="Введите описание товара" class="
+              form-product__item
+              form-product__item-description
+              form-product__item_el_main-text
+            "></textarea>
+
+          <label for="url" class="form-product__label">
+            Введите ссылку
+          </label>
+          <input class="form-product__item form-product__item-link" type="url" id="url" name="url" placeholder=" Введите ссылку на изображение" required>
+
+          <label for="price" class="form-product__label">
+            Введите цену
+          </label>
+          <input class="form-product__item form-product__item-price" type="number" id="price" name="text" placeholder="Введите цену на товар" required>
+
+          <button type="submit" class="
+            form-product__button
+            form-product__button_action_add
+            form-product__button_disabled
+          " disabled>
+            Добавить товар
+          </button>
+        </form>
+      </aside>
+
+      <section class="place-products">
+        <ul class="place-products__list">
+          <li class="card">
+            <img src="<%=require('./img/img1.jpg')%>" alt="#" class="card__photo">
+            <button class="card__button-delete" type="button"></button>
+            <div class="card__description-wrapper">
+              <h3 class="card__title"> Название карточки </h3>
+              <p class="card__description">
+                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy, rail fatty slash gear jammer steeps clipless rip bowl couloir bomb hole berm.
+              </p>
+              <!-- <p class="elements__price" contenteditable="true">1000 ₽</p> -->
+              <input type="number" class="card__price" placeholder="10 999 ₽">
+            </div>
+          </li>
+
+        </ul>
+      </section>
+    </main>
+
+  </div>
 </body>
 
 </html>

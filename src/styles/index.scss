@@ -1,6 +1,5 @@
+@use 'frameworks' as *;
 @use 'helpers/color' as *;
-@import url(../vendor/normalize.scss);
-@import url(../vendor/fonts.scss);
 
 * {
   margin: 0;
@@ -10,10 +9,4 @@
 
 html {
   font-size: 62.5%;
-}
-
-.root {
-  font-family: 'Inter', Arial, sans-serif;
-  background-color: $bg-page;
-  color: $main-text-color;
 }

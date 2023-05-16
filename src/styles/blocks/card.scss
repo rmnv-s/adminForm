@@ -1,0 +1,103 @@
+@use '../helpers/color' as *;
+
+.card {
+  position: relative;
+  /* width: 100%; */
+  max-width: 29.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #fff;
+  &:hover .card__button-delete {
+    opacity: 1;
+  }
+
+  &__photo {
+    width: 100%;
+    min-width: 29.5rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 0.4rem 0.4rem 0 0;
+    @media (max-width: 320px) {
+      min-width: 3rem;
+    }
+  }
+
+  &__button-delete {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    background-image: url(../img/delete-card-icon.svg);
+    background-size: cover;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+
+    opacity: 0;
+
+    @media (max-width: 380px) {
+      top: 1.5rem;
+      right: 1.5rem;
+      opacity: 1;
+    }
+  }
+
+  &__description-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem 1.6rem 2.4rem;
+
+    min-height: 22.3rem;
+    border-top: 0.1rem solid $bg-color;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+    flex: 1 1 auto;
+    overflow: hidden;
+    max-height: 8rem;
+  }
+
+  &__price {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 600;
+    border: none;
+  }
+}
+
+input.card__price::placeholder {
+  color: blue;
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: red;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: red;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: red;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: red;
+  }
+}

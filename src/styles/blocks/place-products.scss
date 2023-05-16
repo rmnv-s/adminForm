@@ -1,0 +1,22 @@
+@use '../helpers/color' as *;
+
+.place-products {
+  background-color: $bg-color;
+  border-radius: 1rem;
+  padding: 2.3rem 1.5rem 3rem;
+  &__list {
+    list-style: none;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33.2rem, 1fr));
+    justify-content: center;
+    gap: 16px;
+    padding: 0;
+    width: 100%;
+
+    @media (max-width: 320px) {
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    }
+  }
+}

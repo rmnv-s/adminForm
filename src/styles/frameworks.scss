@@ -1,0 +1,12 @@
+@forward 'helpers/normalize';
+@forward 'helpers/fonts';
+@forward 'helpers/color';
+
+@forward 'blocks/root.scss';
+@forward 'blocks/page.scss';
+@forward 'blocks/main.scss';
+
+@forward 'blocks/form-product.scss';
+@forward 'blocks/place-products.scss';
+
+@forward 'blocks/card.scss';

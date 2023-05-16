@@ -1,0 +1,72 @@
+@use '../helpers/color' as *;
+
+.form-product {
+  position: sticky;
+  top: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2.4rem;
+  background-color: $bg-color;
+
+  &__label {
+    position: relative;
+    margin-bottom: 0.4rem;
+    color: #fff;
+
+    /*   добавили кружок ко всем label */
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: #ff4567;
+      border-radius: 50%;
+      top: -0.2rem;
+    }
+    /* убрали кружок на втором поле */
+    &:nth-of-type(2)::after {
+      content: none;
+    }
+  }
+
+  &__item {
+    background: #fffefb;
+
+    border: none;
+    padding: 1rem 1.1rem 1.6rem;
+    margin-bottom: 1.6rem;
+    outline: none;
+
+    color: #000;
+
+    &_el_main-text {
+      min-height: 10.8rem;
+      resize: none;
+    }
+
+    /* скрывает стрелки у поля number */
+    &-price::-webkit-inner-spin-button,
+    ::-webkit-inner-spin-button {
+      display: none;
+    }
+  }
+  /*    скрывает стрелки у поля number в firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  &__button {
+    border: none;
+    background-color: #7bae73;
+    min-height: 3.6rem;
+    cursor: pointer;
+
+    &_disabled {
+      background-color: #eee;
+      color: #b4b4b4;
+      cursor: default;
+    }
+  }
+}
