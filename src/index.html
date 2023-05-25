@@ -54,24 +54,28 @@
 
       <section class="place-products">
         <ul class="place-products__list">
-          <li class="card">
-            <img src="<%=require('./img/img1.jpg')%>" alt="#" class="card__photo">
-            <button class="card__button-delete" type="button"></button>
-            <div class="card__description-wrapper">
-              <h3 class="card__title"> Название карточки </h3>
-              <p class="card__description">
-                Bro ipsum dolor sit amet gaper backside single track, manny Bike epic clipless. Schraeder drop gondy, rail fatty slash gear jammer steeps clipless rip bowl couloir bomb hole berm.
-              </p>
-              <!-- <p class="elements__price" contenteditable="true">1000 ₽</p> -->
-              <input type="number" class="card__price" placeholder="10 999 ₽">
-            </div>
-          </li>
-
         </ul>
       </section>
-    </main>
 
+
+    </main>
   </div>
+
+  <template class="card-template">
+    <li class="card">
+      <img src="#" alt="#" class="card__photo">
+      <button class="card__button-delete" type="button"></button>
+      <div class="card__description-wrapper">
+        <h3 class="card__title"></h3>
+        <p class="card__description"></p>
+
+        <input type="number" class="card__price" placeholder="">
+      </div>
+    </li>
+  </template>
+
+
+
 </body>
 
 </html>

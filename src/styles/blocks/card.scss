@@ -61,7 +61,7 @@
 
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &__description {
@@ -70,7 +70,7 @@
     font-weight: 400;
     margin-bottom: 3.2rem;
     flex: 1 1 auto;
-    overflow: hidden;
+    // overflow: hidden;
     max-height: 8rem;
   }
 
